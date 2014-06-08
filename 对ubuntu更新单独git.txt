@@ -1,0 +1,9 @@
+若遇到：
+Please upgrade your git client.
+GitHub.com no longer supports git over dumb-http: https://github.com/blog/809-git-dumb-http-transport-to-be-turned-off-in-90-days
+问题，按照如下安装即可。
+
+sudo apt-get install python-software-properties
+sudo add-apt-repository ppa:git-core/ppa
+sudo apt-get update
+sudo apt-get install git
