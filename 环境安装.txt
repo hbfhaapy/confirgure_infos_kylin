@@ -1,0 +1,112 @@
+本机环境：Kylin(Ubuntu14.04中文版-优麒麟)
+
+安装环境为：
+Rails 3.2
+Ruby 1.9.3-p448
+
+安装:
+1.Ruby
+sudo apt-get update
+sudo apt-get install git-core curl zlib1g-dev build-essential libssl-dev libreadline-dev libyaml-dev libsqlite3-dev sqlite3 libxml2-dev libxslt1-dev libcurl4-openssl-dev python-software-properties
+使用 rbenv:
+  cd
+  git clone git://github.com/sstephenson/rbenv.git .rbenv
+  echo 'export PATH="$HOME/.rbenv/bin:$PATH"' >> ~/.bashrc
+  echo 'eval "$(rbenv init -)"' >> ~/.bashrc
+  exec $SHELL
+
+  git clone git://github.com/sstephenson/ruby-build.git ~/.rbenv/plugins/ruby-build
+  echo 'export PATH="$HOME/.rbenv/plugins/ruby-build/bin:$PATH"' >> ~/.bashrc
+  exec $SHELL
+
+  rbenv install 1.9.3
+  rbenv global 1.9.3
+  ruby -v
+使用 rvm:
+  sudo apt-get install libgdbm-dev libncurses5-dev automake libtool bison libffi-dev
+  curl -L https://get.rvm.io | bash -s stable
+  source ~/.rvm/scripts/rvm
+  echo "source ~/.rvm/scripts/rvm" >> ~/.bashrc
+  rvm install 2.1.2
+  rvm use 2.1.2 --default
+  ruby -v
+直接安装Ruby：
+  cd
+  wget http://ftp.ruby-lang.org/pub/ruby/2.1/ruby-2.1.2.tar.gz
+  tar -xzvf ruby-2.1.2.tar.gz
+  cd ruby-2.1.2/
+  ./configure
+  make
+  sudo make install
+  ruby -v
+最后一步，设置安装gem包时不安装日志：
+  echo "gem: --no-ri --no-rdoc" > ~/.gemrc
+
+2.配置Git
+
+git config --global color.ui true
+git config --global user.name "Devin He"
+git config --global user.email "huopo125@163.com"
+以下为配置Github(可参考https://help.github.com/articles/generating-ssh-keys)：
+ssh-keygen -t rsa -C "huopo125@163.com"
+ssh-add ~/.ssh/id_rsa
+cat ~/.ssh/id_rsa.pub #(查看文件，将内容复制到Github中。)
+ssh -T git@github.com #(此步若出现yes/no，输入yes继续即可。)
+
+3.安装Rails
+sudo add-apt-repository ppa:chris-lea/node.js
+sudo apt-get update
+sudo apt-get install nodejs
+gem source -r http://rubygems.org/
+gem source -a https://ruby.taobao.org/
+gem install rails --version 3.2
+rbenv rehash
+rails -v #(用于查看版本是否正确)
+
+4.安装MySQL
+sudo apt-get install mysql-server mysql-client libmysqlclient-dev
+
+5.安装PostgreSQL
+sudo sh -c "echo 'deb http://apt.postgresql.org/pub/repos/apt/ precise-pgdg main' > /etc/apt/sources.list.d/pgdg.list"
+wget --quiet -O - http://apt.postgresql.org/pub/repos/apt/ACCC4CF8.asc | sudo apt-key add -
+sudo apt-get update
+sudo apt-get install postgresql-common
+sudo apt-get install postgresql-9.3 libpq-dev
+sudo -u postgres createuser user_name -s
+sudo -u postgres psql #使用默认的用户名登录
+postgres=# \password user_name  #修改user_name的密码
+
+6.测试环境
+#### 测试 SQLite (Rails自带的数据库)
+rails new myapp1
+
+#### 测试 MySQL
+rails new myapp2 -d mysql
+
+#### 测试 Postgres
+rails new myapp3 -d postgresql
+
+# 逐个进行测试（注意配置database.yml文件）
+cd myapp1
+rake db:create
+rails server
+
+7.安装sublime text 3
+http://www.sublimetext.com/3
+
+8.安装MongodDB(http://docs.mongodb.org/manual/tutorial/install-mongodb-on-ubuntu/)
+  sudo apt-key adv --keyserver hkp://keyserver.ubuntu.com:80 --recv 7F0CEB10
+  echo 'deb http://downloads-distro.mongodb.org/repo/ubuntu-upstart dist 10gen' | sudo tee /etc/apt/sources.list.d/mongodb.list
+  sudo apt-get update
+  sudo apt-get install mongodb-org
+  apt-get install mongodb-org=2.6.1 mongodb-org-server=2.6.1 mongodb-org-shell=2.6.1 mongodb-org-mongos=2.6.1 mongodb-org-tools=2.6.1
+  echo "mongodb-org hold" | sudo dpkg --set-selections
+  echo "mongodb-org-server hold" | sudo dpkg --set-selections
+  echo "mongodb-org-shell hold" | sudo dpkg --set-selections
+  echo "mongodb-org-mongos hold" | sudo dpkg --set-selections
+  echo "mongodb-org-tools hold" | sudo dpkg --set-selections
+运行：
+  sudo /etc/init.d/mongod start
+  tail -f /var/log/mongodb/mongod.log
+  sudo /etc/init.d/mongod stop
+  sudo /etc/init.d/mongod restart

@@ -1,0 +1,20 @@
+{
+	"installed_packages":
+	[
+		"Alignment",
+		"BracketHighlighter",
+		"ColorPicker",
+		"CompactExpandCss",
+		"CSScomb JS",
+		"Emmet Css Snippets",
+		"Hex-to-RGBA",
+		"JsFormat",
+		"Package Control",
+		"Rails Developer Snippets",
+		"Ruby on Rails snippets",
+		"RubyTest",
+		"SublimeTmpl",
+		"Tag",
+		"Tradsim"
+	]
+}

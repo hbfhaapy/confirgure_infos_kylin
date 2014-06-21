@@ -1,0 +1,418 @@
+// While you can edit this file, it's best to put your changes in
+// "User/Preferences.sublime-settings", which overrides the settings in here.
+// 此文件是默认的配置文件，若需要自定义配置，请写入用户配置文件中。
+// Settings may also be placed in file type specific options files, for
+// example, in Packages/Python/Python.sublime-settings for python files.
+// 具体的文件类型配置文件可以放入如此格式的文件中：Packages/Python/Python.sublime-settings
+{
+    // Sets the colors used within the text area
+    // 设置文本区域的颜色
+    "color_scheme": "Packages/Color Scheme - Default/Monokai.tmTheme",
+
+    // Note that the font_face and font_size are overriden in the platform
+    // specific settings file, for example, "Preferences (Linux).sublime-settings".
+    // Because of this, setting them here will have no effect: you must set them
+    // in your User File Preferences.
+    // 注意字体的大小以及显示参数，
+    // 此文件中的配置会自动被具体的平台配置文件覆盖。
+    // 若想自定义请在用户参数配置文件中配置。
+    "font_face": "",
+    "font_size": 10,
+
+    // Valid options are "no_bold", "no_italic", "no_antialias", "gray_antialias",
+    // "subpixel_antialias", "no_round" (OS X only) and "directwrite" (Windows only)
+    "font_options": [],
+
+    // Characters that are considered to separate words
+    // 被识别为独立字的字符
+    "word_separators": "./\\()\"'-:,.;<>~!@#$%^&*|+=[]{}`~?",
+
+    // Set to false to prevent line numbers being drawn in the gutter
+    // 配置显示行号
+    "line_numbers": true,
+
+    // Set to false to hide the gutter altogether
+    // 显示栏距
+    "gutter": true,
+
+    // Spacing between the gutter and the text
+    // 设置栏与文本的距离
+    "margin": 4,
+
+    // Fold buttons are the triangles shown in the gutter to fold regions of text
+    // 是否显示三角折叠按钮
+    "fold_buttons": true,
+
+    // Hides the fold buttons unless the mouse is over the gutter
+    // 是否在鼠标离开栏距时隐藏折叠按钮
+    "fade_fold_buttons": true,
+
+    // Columns in which to display vertical rulers
+    // 设置显示线条的列
+    "rulers": [],
+
+    // Set to true to turn spell checking on by default
+    // 是否打开拼写检查
+    "spell_check": false,
+
+    // The number of spaces a tab is considered equal to
+    // 设置tab与空格的等值
+    "tab_size": 4,
+
+    // Set to true to insert spaces when tab is pressed
+    // 设置是否将tab转换为空格
+    "translate_tabs_to_spaces": false,
+
+    // If translate_tabs_to_spaces is true, use_tab_stops will make tab and
+    // backspace insert/delete up to the next tabstop
+    "use_tab_stops": true,
+
+    // Set to false to disable detection of tabs vs. spaces on load
+    // 是否在加载时探测tab与空格的转换
+    "detect_indentation": true,
+
+    // Calculates indentation automatically when pressing enter
+    // 按enter键后，自动计算缩进
+    "auto_indent": true,
+
+    // Makes auto indent a little smarter, e.g., by indenting the next line
+    // after an if statement in C. Requires auto_indent to be enabled.
+    // 自动语法缩进
+    "smart_indent": true,
+
+    // Adds whitespace up to the first open bracket when indenting. Requires
+    // auto_indent to be enabled.
+    // 当缩进时为开括号添加空格
+    "indent_to_bracket": false,
+
+    // Trims white space added by auto_indent when moving the caret off the
+    // line.
+    // 自动去除缩进添加的空格
+    "trim_automatic_white_space": true,
+
+    // Disables horizontal scrolling if enabled.
+    // May be set to true, false, or "auto", where it will be disabled for
+    // source code, and otherwise enabled.
+    // 是否自动换行
+    "word_wrap": "auto",
+
+    // Set to a value other than 0 to force wrapping at that column rather than the
+    // window width
+    // 设置自动换行宽度
+    "wrap_width": 0,
+
+    // Set to false to prevent word wrapped lines from being indented to the same
+    // level
+    // 设置自动换行之后，子行的缩进
+    "indent_subsequent_lines": true,
+
+    // Draws text centered in the window rather than left aligned
+    // 设置文本对齐中心
+    "draw_centered": false,
+
+    // Controls auto pairing of quotes, brackets etc
+    // 自动匹配引号，括号
+    "auto_match_enabled": true,
+
+    // Word list to use for spell checking
+    // 自动拼写检查的字典参数
+    "dictionary": "Packages/Language - English/en_US.dic",
+
+    // Set to true to draw a border around the visible rectangle on the minimap.
+    // The color of the border will be determined by the "minimapBorder" key in
+    // the color scheme
+    // 迷你地图中对可视区域画边框
+    "draw_minimap_border": false,
+
+    // If enabled, will highlight any line with a caret
+    // 高亮有脱字符的行
+    "highlight_line": false,
+
+    // Valid values are "smooth", "phase", "blink", "wide" and "solid".
+    // 脱字符号显示的格式
+    "caret_style": "smooth",
+
+    // Set to false to disable underlining the brackets surrounding the caret
+    // 是否显示匹配括号的下划线
+    "match_brackets": true,
+
+    // Set to false if you'd rather only highlight the brackets when the caret is
+    // next to one
+    // 当括号和逃逸字符一起的时候，若仅仅想高亮括号，将其设置为false
+    "match_brackets_content": true,
+
+    // Set to false to not highlight square brackets. This only takes effect if
+    // match_brackets is true
+    // 是否高亮方括号
+    "match_brackets_square": true,
+
+    // Set to false to not highlight curly brackets. This only takes effect if
+    // match_brackets is true
+    // 是否高亮弯括号
+    "match_brackets_braces": true,
+
+    // Set to false to not highlight angle brackets. This only takes effect if
+    // match_brackets is true
+    // 是否高亮三角括号
+    "match_brackets_angle": false,
+
+    // Enable visualization of the matching tag in HTML and XML
+    // 是否显示匹配的html/xml的标签
+    "match_tags": true,
+
+    // Highlights other occurrences of the currently selected text
+    // 高亮文本中所有匹配当前选中的词的词
+    "match_selection": true,
+
+    // Additional spacing at the top of each line, in pixels
+    // 添加行上间距
+    "line_padding_top": 0,
+
+    // Additional spacing at the bottom of each line, in pixels
+    // 添加行的下间距
+    "line_padding_bottom": 0,
+
+    // Set to false to disable scrolling past the end of the buffer.
+    // On OS X, this value is overridden in the platform specific settings, so
+    // you'll need to place this line in your user settings to override it.
+    // 添加通往最后的滚动条
+    "scroll_past_end": true,
+
+    // This controls what happens when pressing up or down when on the first
+    // or last line.
+    // On OS X, this value is overridden in the platform specific settings, so
+    // you'll need to place this line in your user settings to override it.
+    // 在第一行/最后一行按下up/down的跳转功能
+    "move_to_limit_on_up_down": false,
+
+    // Set to "none" to turn off drawing white space, "selection" to draw only the
+    // white space within the selection, and "all" to draw all white space
+    // 是否显示空格标志
+    "draw_white_space": "selection",
+
+    // Set to false to turn off the indentation guides.
+    // The color and width of the indent guides may be customized by editing
+    // the corresponding .tmTheme file, and specifying the colors "guide",
+    // "activeGuide" and "stackGuide"
+    // 是否开启缩进向导
+    "draw_indent_guides": true,
+
+    // Controls how the indent guides are drawn, valid options are
+    // "draw_normal" and "draw_active". draw_active will draw the indent
+    // guides containing the caret in a different color.
+    // 设置缩进向导的风格
+    "indent_guide_options": ["draw_normal"],
+
+    // Set to true to removing trailing white space on save
+    // 设置是否在保存是删除行尾的空格
+    "trim_trailing_white_space_on_save": false,
+
+    // Set to true to ensure the last line of the file ends in a newline
+    // character when saving
+    // 设置是否在保存文件时加入一个新行
+    "ensure_newline_at_eof_on_save": false,
+
+    // Set to true to automatically save files when switching to a different file
+    // or application
+    // 设置当选择的文件改变后，自动保存文件
+    "save_on_focus_lost": false,
+
+    // The encoding to use when the encoding can't be determined automatically.
+    // ASCII, UTF-8 and UTF-16 encodings will be automatically detected.
+    // 设置编码
+    "fallback_encoding": "Western (Windows 1252)",
+
+    // Encoding used when saving new files, and files opened with an undefined
+    // encoding (e.g., plain ascii files). If a file is opened with a specific
+    // encoding (either detected or given explicitly), this setting will be
+    // ignored, and the file will be saved with the encoding it was opened
+    // with.
+    // 默认编码
+    "default_encoding": "UTF-8",
+
+    // Files containing null bytes are opened as hexadecimal by default
+    // 空字节的文件以十六进制的格式打开
+    "enable_hexadecimal_encoding": true,
+
+    // Determines what character(s) are used to terminate each line in new files.
+    // Valid values are 'system' (whatever the OS uses), 'windows' (CRLF) and
+    // 'unix' (LF only).
+    // 设置行结束符
+    "default_line_ending": "system",
+
+    // When enabled, pressing tab will insert the best matching completion.
+    // When disabled, tab will only trigger snippets or insert a tab.
+    // Shift+tab can be used to insert an explicit tab when tab_completion is
+    // enabled.
+    // tab开启自动补齐
+    "tab_completion": true,
+
+    // Enable auto complete to be triggered automatically when typing.
+    // 开启自动补齐
+    "auto_complete": true,
+
+    // The maximum file size where auto complete will be automatically triggered.
+    // 自动补齐文件的大小的最大值
+    "auto_complete_size_limit": 4194304,
+
+    // The delay, in ms, before the auto complete window is shown after typing
+    // 自动补齐的延迟
+    "auto_complete_delay": 50,
+
+    // Controls what scopes auto complete will be triggered in
+    // 自动补齐选择器
+    "auto_complete_selector": "source - comment",
+
+    // Additional situations to trigger auto complete
+    // 添加能够自动补齐的情形
+    "auto_complete_triggers": [ {"selector": "text.html", "characters": "<"} ],
+
+    // By default, auto complete will commit the current completion on enter.
+    // This setting can be used to make it complete on tab instead.
+    // Completing on tab is generally a superior option, as it removes
+    // ambiguity between committing the completion and inserting a newline.
+    // 默认的，自动补齐将会提交当前enter补齐的内容。
+    // 此项设置可以被tab补齐替代。
+    "auto_complete_commit_on_tab": false,
+
+    // Controls if auto complete is shown when snippet fields are active.
+    // Only relevant if auto_complete_commit_on_tab is true.
+    // 当片段区域被激活，将显示自动补齐
+    "auto_complete_with_fields": false,
+
+    // By default, shift+tab will only unindent if the selection spans
+    // multiple lines. When pressing shift+tab at other times, it'll insert a
+    // tab character - this allows tabs to be inserted when tab_completion is
+    // enabled. Set this to true to make shift+tab always unindent, instead of
+    // inserting tabs.
+    // 是否设置shift+tab按键为取消缩进功能
+    "shift_tab_unindent": false,
+
+    // If true, the copy and cut commands will operate on the current line
+    // when the selection is empty, rather than doing nothing.
+    // 设置是否允许拷贝空行
+    "copy_with_empty_selection": true,
+
+    // If true, the selected text will be copied into the find panel when it's
+    // shown.
+    // On OS X, this value is overridden in the platform specific settings, so
+    // you'll need to place this line in your user settings to override it.
+    // 若为true，所选择的文本将会自动拷贝到查找框中
+    "find_selected_text": true,
+
+    // When drag_text is enabled, clicking on selected text will begin a
+    // drag-drop operation
+    // 开启拖拽功能
+    "drag_text": true,
+
+    //
+    // User Interface Settings
+    //
+
+    // The theme controls the look of Sublime Text's UI (buttons, tabs, scroll bars, etc)
+    // 编辑器主题
+    "theme": "Default.sublime-theme",
+
+    // Set to 0 to disable smooth scrolling. Set to a value between 0 and 1 to
+    // scroll slower, or set to larger than 1 to scroll faster
+    //设置滚动速度
+    "scroll_speed": 1.0,
+
+    // Controls side bar animation when expanding or collapsing folders
+    // 当打开或折叠文件夹时，控制器边栏自动变化
+    "tree_animation_enabled": true,
+
+    // Makes tabs with modified files more visible
+    // 使得修改文件的tab建可视化
+    "highlight_modified_tabs": false,
+
+    "show_tab_close_buttons": true,
+
+    // Show folders in the side bar in bold
+    // 显示文件夹
+    "bold_folder_labels": false,
+
+    // OS X 10.7 only: Set to true to disable Lion style full screen support.
+    // Sublime Text must be restarted for this to take effect.
+    // 对于OS X 10.7，设置是否开启小屏
+    "use_simple_full_screen": false,
+
+    // OS X only. Valid values are true, false, and "auto". Auto will enable
+    // the setting when running on a screen 2880 pixels or wider (i.e., a
+    // Retina display). When this setting is enabled, OpenGL is used to
+    // accelerate drawing. Sublime Text must be restarted for changes to take
+    // effect.
+    // 设置OS X系统上屏幕缓存
+    "gpu_window_buffer": "auto",
+
+    // Valid values are "system", "enabled" and "disabled"
+    // 滚动条
+    "overlay_scroll_bars": "system",
+
+    //
+    // Application Behavior Settings
+    //
+
+    // Exiting the application with hot_exit enabled will cause it to close
+    // immediately without prompting. Unsaved modifications and open files will
+    // be preserved and restored when next starting.
+    //
+    // Closing a window with an associated project will also close the window
+    // without prompting, preserving unsaved changes in the workspace file
+    // alongside the project.
+    // 允许使用热退出，再次打开时，自动显示未保存的文件
+    "hot_exit": true,
+
+    // remember_open_files makes the application start up with the last set of
+    // open files. Changing this to false will have no effect if hot_exit is
+    // true
+    // 是否记录打开的文件
+    "remember_open_files": true,
+
+    // OS X only: When files are opened from finder, or by dragging onto the
+    // dock icon, this controls if a new window is created or not.
+    // 对于OS X，是否在新窗口中打开文件
+    "open_files_in_new_window": true,
+
+    // OS X only: This controls if an empty window is created at startup or not.
+    // 是否在启动时，默认启动空窗口
+    "create_window_at_startup": true,
+
+    // Set to true to close windows as soon as the last file is closed, unless
+    // there's a folder open within the window. This is always enabled on OS X,
+    // changing it here won't modify the behavior.
+    // 是否自动关闭空窗口
+    "close_windows_when_empty": false,
+
+    // Show the full path to files in the title bar.
+    // On OS X, this value is overridden in the platform specific settings, so
+    // you'll need to place this line in your user settings to override it.
+    // 在标题栏上显示文件的绝对路径，在OS X系统上，此值会被平台参数覆盖。
+    "show_full_path": true,
+
+    // Shows the Build Results panel when building. If set to false, the Build
+    // Results can be shown via the Tools/Build Results menu.
+    // 显示构建窗口
+    "show_panel_on_build": true,
+
+    // Preview file contents when clicking on a file in the side bar. Double
+    // clicking or editing the preview will open the file and assign it a tab.
+    // 开启单击预览文件功能，双击将新增tab栏打开文件
+    "preview_on_click": true,
+
+    // folder_exclude_patterns and file_exclude_patterns control which files
+    // are listed in folders on the side bar. These can also be set on a per-
+    // project basis.
+    // 设置显示的例外文件夹和普通文件夹
+    "folder_exclude_patterns": [".svn", ".git", ".hg", "CVS"],
+    "file_exclude_patterns": ["*.pyc", "*.pyo", "*.exe", "*.dll", "*.obj","*.o", "*.a", "*.lib", "*.so", "*.dylib", "*.ncb", "*.sdf", "*.suo", "*.pdb", "*.idb", ".DS_Store", "*.class", "*.psd", "*.db"],
+    // These files will still show up in the side bar, but won't be included in
+    // Goto Anything or Find in Files
+    // 设置查找字符串时自动跳过的文件格式
+    "binary_file_patterns": ["*.jpg", "*.jpeg", "*.png", "*.gif", "*.ttf", "*.tga", "*.dds", "*.ico", "*.eot", "*.pdf", "*.swf", "*.jar", "*.zip"],
+
+    // List any packages to ignore here. When removing entries from this list,
+    // a restart may be required if the package contains plugins.
+    // 设置忽略的包
+    "ignored_packages": ["Vintage"]
+}
