@@ -1,0 +1,9 @@
+Rails console Tips
+清屏----->ctrl+l
+重新加载rails环境------>reload!
+搜索命令的历史记录------>ctrl+r
+继续使用上一个命令的结果----->Article.first--->article=_
+发起HttpRequest------>app.get "/"---->response = app.response--->response.body
+rails沙盒-------->rails console --sandbox
+test环境控制台----->rails c test
+访问helper方法----->helper.number_to_currency('123.45')
